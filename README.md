@@ -1,8 +1,15 @@
 # My project
 This is a small project by having a Docker image that contains 3 Django web apps and a webserver composed of an nginx + gUnicorn instance.
 
-This should be the folder structure:
+## TLDR
+After pulling the code, On the shell, run the following commands to build the image and to run the container:
+```
+docker build -t my-website .
+docker run  --name my-website -p 80:80 my-website
+```
 
+# Structure
+This should be the folder structure:
 ```
 project/
 ├── .venv
@@ -18,6 +25,7 @@ project/
 └── start.sh
 ```
 
+# How to create this from zero
 ## Step 1: Create the folder structure and the needed files
 ### Requirements file
 
@@ -130,5 +138,5 @@ docker build -t my-website .
 
 On the shell, run the following command to run the image:
 ```
-docker run -p 80:80 my-website
+docker run  --name my-website -p 80:80 my-website
 ```
